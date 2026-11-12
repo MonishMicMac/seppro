@@ -1,0 +1,42 @@
+{
+    "status": true,
+    "data": {
+        "products": [
+            {
+                "id": "1",
+                "name": "Student 1",
+                "image_url": "http://www.sau.ac.bd/faculties/agriculture/departments/Genetics_Plant%20Breeding/images/Passport%20size%20photo.jpg"
+            },
+            {
+                "id": "431",
+                "name": "Student 2",
+                "image_url": "http://jrss.co.in/stu_image/6.jpg"
+            },
+{
+                "id": "431",
+                "name": "Student 3",
+                "image_url": "http://braintreegate.com/wp-content/uploads/2014/04/14750_Arafat-Passport-Size.jpg"
+            },
+            {
+                "id": "424",
+                "name": "Student 4",
+                "image_url": "http://braintreegate.com/wp-content/uploads/2014/04/passport-size-picture-in-uniform-30-1-2012.jpg"
+            },
+             {
+                "id": "426",
+                "name": "Student 5",
+                "image_url": "http://www.bcmtouring.com/forum/attachments/_dsc5655222-small-border.jpg-146403d1298380429"
+            },
+{
+                "id": "431",
+                "name": "Student 6",
+                "image_url": "http://d13pix9kaak6wt.cloudfront.net/avatar/users/m/a/x/maxwiseltier_1394675058_41.jpg"
+            },
+            {
+                "id": "419",
+                "name": "Student 7",
+                "image_url": "http://2.bp.blogspot.com/-p3YqdG-_xBg/UcFdEsmolwI/AAAAAAAAAIc/6w7eyQdx_So/s1600/Unni++Passport+size+photo+in+Colour+dress.jpg"
+            }
+        ]
+    }
+}

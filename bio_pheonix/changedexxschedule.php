@@ -1,0 +1,93 @@
+<?php
+include("connect23.php"); 
+
+
+$rep_id=$_REQUEST['rep_id'];
+$contactt;
+
+$year = $_REQUEST['year'];
+
+$i='0';
+
+
+
+
+
+
+$jjreprmgr = mysql_query("SELECT rep_id FROM representative WHERE id='".$_REQUEST['rep_id']."'")or die(mysql_error()); 
+$jjreprmgr_res = mysql_fetch_array($jjreprmgr);
+
+
+
+
+
+$strSQL = mysql_query("SELECT expenses,leaveapplieddate FROM  repgivenasleave  WHERE repid='$rep_id' AND (leaveapplieddate like '$year%')")or die(mysql_error());
+
+while($res = mysql_fetch_array($strSQL))
+{
+if($i=='0')
+{
+
+$datecount = mysql_query("SELECT COUNT(wp_date) FROM tbl_work_plan WHERE wp_date='".$res['leaveapplieddate']."' AND wp_dc='D' AND wp_rep_id='$rep_id'");
+$date_res = mysql_fetch_array($datecount);
+
+
+$datecount5 = mysql_query("SELECT COUNT(wp_date) FROM tbl_work_plan WHERE wp_rep_id='$rep_id' AND (wp_date like '$year%')");
+$date_res5 = mysql_fetch_array($datecount5);
+
+$date_ress=$date_res['COUNT(wp_date)']+$date_res5['COUNT(wp_date)'];
+
+
+$datecount1 = mysql_query("SELECT COUNT(wp_date) FROM tbl_work_plan WHERE wp_date='".$res['leaveapplieddate']."' AND wp_dc='C' AND wp_rep_id='$rep_id'");
+$date_res1 = mysql_fetch_array($datecount1);
+
+$contactt='[{"expenses":"'.$res['expenses'].'","'.leaveapplieddate.'":"'.$res['leaveapplieddate'].'","dr":"'.$date_ress.'","ch":"'.$date_res1['COUNT(wp_date)'].'"},';
+
+$i++;
+}
+else
+{
+
+$datecount = mysql_query("SELECT COUNT(wp_date) FROM tbl_work_plan WHERE wp_date='".$res['leaveapplieddate']."' AND wp_dc='D' AND wp_rep_id='$rep_id'");
+$date_res = mysql_fetch_array($datecount);
+
+
+$datecount5 = mysql_query("SELECT COUNT(wp_date) FROM tbl_work_plan WHERE wp_rep_id='$rep_id' AND (wp_date like '$year%')");
+$date_res5 = mysql_fetch_array($datecount5);
+
+$date_ress=$date_res['COUNT(wp_date)']+$date_res5['COUNT(wp_date)'];
+
+$datecount1 = mysql_query("SELECT COUNT(wp_date) FROM tbl_work_plan WHERE wp_date='".$res['leaveapplieddate']."' AND wp_dc='C' AND wp_rep_id='$rep_id'");
+$date_res1 = mysql_fetch_array($datecount1);
+
+
+$contactt.='{"expenses":"'.$res['expenses'].'","'.leaveapplieddate.'":"'.$res['leaveapplieddate'].'","dr":"'.$date_ress.'","ch":"'.$date_res1['COUNT(wp_date)'].'"},';
+}
+
+
+
+
+
+}
+
+
+$contactt;
+
+$opt = substr($contactt,0,-1);
+$optlen = strlen($opt);
+if($optlen < 5)
+{
+echo '[]';
+}
+else
+{
+echo $opt.']';
+}
+
+
+
+
+
+
+
+?>

@@ -1,0 +1,58 @@
+
+# Database backups
+*.sql.gz
+*.bak
+
+# Large videos
+/gescoffrdemo/samplevideo/samplevideoss.mp4
+/vsh_hospital/gescoffr/samplevideo/samplevideoss.mp4
+
+# Large archive
+/gage_android_british/test/napps_nigeria.zip
+
+# Oversized database backups
+/seppro (3).sql
+/zinnia.sql
+/backup/my_db_backup.sql
+
+# Files exceeding GitHub's individual file limit
+/gescoffrdemo/samplevideo/samplevideoss.mp4
+/vsh_hospital/gescoffr/samplevideo/samplevideoss.mp4
+/gage_android_british/test/napps_nigeria.zip
+
+
+# Environment and sensitive files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Embedded Git repository
+/ammachikitchen/
+
+# Exclude GM Chit backup archives
+**/GM_Chit-backup*
+**/GM_Chit-backup*
+
+# Exclude Chit Funds backup folder
+/chit_funds/pathtobkfolder/
+
+# Excluded project directories
+/ammachikitchen/
+/chit_funds/pathtobkfolder/
+**/GM_Chit-backup*
+
+# Files exceeding GitHub's file size limit
+/seppro (3).sql
+/zinnia.sql
+/backup/my_db_backup.sql
+/gescoffrdemo/samplevideo/samplevideoss.mp4
+/vsh_hospital/gescoffr/samplevideo/samplevideoss.mp4
+/gage_android_british/test/napps_nigeria.zip
+
+/ammachikitchen/

@@ -1,0 +1,8 @@
+<?php
+$GLOBALS["oAeQSUBOZwyteqPDHQE"]=base64_decode("JyBPUkRFUiBCWSBpZCBERVND");$GLOBALS["HTjkyYGNlNhbMbCwfxoh"]=base64_decode("ZC9tL1k=");$GLOBALS["JgyIJgjrEMnKvBixXcc"]=base64_decode("U0VMRUNUICogRlJPTSBhcmVhd2lzZV90ZW1wIFdIRVJFIGNfZGF0ZT0n");$GLOBALS["fYnHIJWSnwzufWAZkBqF"]=base64_decode("aW5jbHVkZS9jb25uZWN0LnBocA==");
+?><table width="100%" cellpadding="5" cellspacing="7" border="0" style="border:1px solid #CCCCCC; border-collapse:collapse;" align="left"> 
+	<tr style="border:1px solid #CCCCCC; border-collapse:collapse;"><th align="left">CUSTOMER</th><th align="left">Product</th><th>QTY</th><th>R</th><th>F</th><th align="center">Action</th></tr>
+    <?php include($GLOBALS["fYnHIJWSnwzufWAZkBqF"]); $IGTLZDyqjZdSqfzUPKna = mysql_query($GLOBALS["JgyIJgjrEMnKvBixXcc"].date($GLOBALS["HTjkyYGNlNhbMbCwfxoh"]).$GLOBALS["oAeQSUBOZwyteqPDHQE"]); while($rkoHfWlPrWNxcKbbZUw=mysql_fetch_object($IGTLZDyqjZdSqfzUPKna)){ ?>
+    <tr style="border:1px solid #CCCCCC; border-collapse:collapse;"><td><?php echo $rkoHfWlPrWNxcKbbZUw->cust_name;?></td><td><?php echo $rkoHfWlPrWNxcKbbZUw->pro_name;?></td><td align="center"><?php echo $rkoHfWlPrWNxcKbbZUw->quantity;?></td><td align="center"><?php echo $rkoHfWlPrWNxcKbbZUw->replace_quantity;?></td><td align="center"><?php echo $rkoHfWlPrWNxcKbbZUw->free_quantity;?></td><td align="center"><a href="javascript:del(<?php echo $rkoHfWlPrWNxcKbbZUw->id;?>)"><img src="img/uploadify-cancel.png" width="20" height="20" /></a></td></tr>
+    <?php } ?>
+</table>

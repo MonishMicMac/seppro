@@ -1,0 +1,3 @@
+<?php
+$GLOBALS["AomqcaAPpiWldFuuNxcg"]=base64_decode("c2VsZWN0IERpc3RpbmN0IGRpc3RfaWQgZnJvbSBwaW5jb2RlX2xpc3Qgb3JkZXIgYnkgZGlzdF9pZA==");$GLOBALS["YwTxtTPHFcxOofSfhhI"]=base64_decode("aW5jbHVkZS9zZWxlY3QucGhw");$GLOBALS["fYnHIJWSnwzufWAZkBqF"]=base64_decode("aW5jbHVkZS9jb25uZWN0LnBocA==");
+?><?php include($GLOBALS["fYnHIJWSnwzufWAZkBqF"]); require_once($GLOBALS["YwTxtTPHFcxOofSfhhI"]); $WWKOgLrblwyJahTDDFld=$GLOBALS["AomqcaAPpiWldFuuNxcg"]; echo $vIIeTOVuBnHEwRCnmfeQ=mysql_num_rows($WWKOgLrblwyJahTDDFld); ?>

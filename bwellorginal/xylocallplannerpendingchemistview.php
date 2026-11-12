@@ -1,0 +1,19 @@
+<?php
+
+include("connect.php"); 
+
+$date=$_REQUEST['date'];
+$repid=$_REQUEST['repid'];
+$attendancestatus=$_REQUEST['attendancestatus'];
+
+
+
+$strSQL = $je->prepare("SELECT * FROM tbl_work_plan,tbl_customer_master,tbl_doctor_chemist,doctors WHERE tbl_work_plan.wp_dc='C' AND tbl_work_plan.wp_date='$date' AND tbl_work_plan.wp_rep_id='$repid' AND tbl_work_plan.attendancestatus='$attendancestatus' AND tbl_customer_master.id=tbl_work_plan.wp_dc_id AND tbl_customer_master.id=tbl_doctor_chemist.chemist_id AND doctors.id=tbl_doctor_chemist.doctor_id GROUP BY tbl_work_plan.wp_id");
+
+$strSQL->execute();
+
+
+$array = $strSQL->fetchAll(PDO::FETCH_ASSOC);
+
+echo json_encode($array);
+?>

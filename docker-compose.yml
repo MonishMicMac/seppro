@@ -1,0 +1,91 @@
+services:
+  # Dedicated SepPro MySQL / MariaDB Server Container
+  seppro_db:
+    image: mariadb:10.4
+    container_name: seppro_db
+    restart: unless-stopped
+    command: [
+      "mysqld",
+      "--character-set-server=utf8mb4",
+      "--collation-server=utf8mb4_unicode_ci",
+      "--max-allowed-packet=512M",
+      "--sql-mode=",
+      "--innodb-strict-mode=0",
+      "--innodb-default-row-format=dynamic"
+    ]
+    environment:
+      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD:-$3pp60@2016}"
+      MYSQL_DATABASE: "${MYSQL_DATABASE:-adsouq_masterblaster}"
+    ports:
+      - "${SEPPRO_DB_PORT:-3310}:3306"
+    volumes:
+      - seppro_mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${MYSQL_ROOT_PASSWORD:-$3pp60@2016}"]
+      interval: 5s
+      timeout: 5s
+      retries: 25
+    networks:
+      - seppro_net
+
+  # SepPro PHP 5.6 Application Container
+  seppro_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        DB_HOST: "${DB_HOST:-seppro_db}"
+    image: seppro-app:latest
+    container_name: seppro_app
+    restart: unless-stopped
+    ports:
+      - "${SEPPRO_APP_PORT:-8085}:80"
+    environment:
+      DB_HOST: "${DB_HOST:-seppro_db}"
+      DB_USER: "${DB_USER:-root}"
+      DB_PASS: "${DB_PASS:-$3pp60@2016}"
+      DB_NAME: "${DB_NAME:-adsouq_masterblaster}"
+      DB_MASTER_NAME: "${DB_MASTER_NAME:-adsouq_masterblaster}"
+      DB_TRACKING_HOST: "${DB_TRACKING_HOST:-35.154.166.167}"
+      DB_TRACKING_USER: "${DB_TRACKING_USER:-root}"
+      DB_TRACKING_PASS: "${DB_TRACKING_PASS:-$3pp60@2016}"
+      DB_TRACKING_NAME: "${DB_TRACKING_NAME:-Tracking}"
+      SEP1_BASE_URL: "${SEP1_BASE_URL:-http://40.192.66.218:8085/}"
+      SERVER_BASE_URL: "${SERVER_BASE_URL:-http://40.192.66.218:8085/}"
+    volumes:
+      - .:/var/www/html/seppro
+      - ./seppro_vhost.conf:/etc/apache2/sites-available/000-default.conf:ro
+    depends_on:
+      seppro_db:
+        condition: service_healthy
+    networks:
+      - seppro_net
+
+  # Dedicated phpMyAdmin for SepPro
+  seppro_phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: seppro_phpmyadmin
+    restart: unless-stopped
+    ports:
+      - "${SEPPRO_PMA_PORT:-8086}:80"
+    environment:
+      PMA_HOST: seppro_db
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD:-$3pp60@2016}"
+      UPLOAD_LIMIT: 512M
+    depends_on:
+      seppro_db:
+        condition: service_healthy
+    networks:
+      - seppro_net
+
+networks:
+  seppro_net:
+    name: seppro_network
+    driver: bridge
+
+volumes:
+  seppro_mysql_data:
+    name: dockertest_seppro_mysql_data
+    external: true
+

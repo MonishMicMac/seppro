@@ -1,0 +1,81 @@
+<?php
+
+include("connect.php"); 
+
+ $id=$_REQUEST['id'];
+$outpu;
+$outpu1;
+$rest;
+
+
+
+
+
+$strSQL = $je->prepare("SELECT representative.id,representative.rep_name FROM representative,assigningreptomanager WHERE representative.rep_id!='0' AND assigningreptomanager.managerid='$id' AND representative.id=assigningreptomanager.repid");
+
+$strSQL->execute();
+$total = $strSQL->fetchAll();
+foreach($total as $row => $link)
+{
+//echo $link['rep_name'];
+$repname=$link['rep_name'];
+$repidd=$link['id'];
+
+date_default_timezone_set("Asia/Kolkata");
+$date = date('Y-m-d');
+$wp_rep_id= $repidd;
+global $total,$visited,$pending,$doctor,$approveddocotr,$unapproveddocotr,$approvedpob,$pendingpob,$deliveredpob,$expensescalculation,$totalchemistrep,$updatechemistrep,$unapprovedchemistrep;
+
+$a = $je->prepare("SELECT COUNT(*) FROM managerjoinworkplans WHERE date='$date' AND managerid='$wp_rep_id'")or die(mysql_error());
+$a->execute();
+$total = $a->fetchColumn();
+
+$b = $je->prepare("SELECT COUNT(*) FROM tbl_work_plan WHERE wp_date='$date' AND wp_rep_id='$wp_rep_id' AND wp_dc='D' AND attendancestatus='1'")or die(mysql_error());
+$b->execute();
+$totalb = $b->fetchColumn();
+
+$c = $je->prepare("SELECT group_concat(rep_name) FROM managerjoinworkplans,representative WHERE managerjoinworkplans.date='$date' AND managerjoinworkplans.managerid='$wp_rep_id' AND representative.id=managerjoinworkplans.repid")or die(mysql_error());
+$c->execute();
+$totalc = $c->fetchColumn();
+
+
+$d = $je->prepare("SELECT group_concat(representative.id) FROM managerjoinworkplans,representative WHERE managerjoinworkplans.date='$date' AND managerjoinworkplans.managerid='$wp_rep_id' AND representative.id=managerjoinworkplans.repid")or die(mysql_error());
+$d->execute();
+$totald = $d->fetchColumn();
+
+$myString = $totald;
+$myArray = explode(',', $myString);
+
+$rest='';
+
+for($yu=0;$yu<count($myArray);$yu++)
+{
+$byu = $je->prepare("SELECT COUNT(wp_id) FROM tbl_work_plan,doctors WHERE tbl_work_plan.wp_date='$date' AND tbl_work_plan.wp_rep_id='$wp_rep_id' AND tbl_work_plan.wp_dc='D' AND tbl_work_plan.attendancestatus='1' AND doctors.id=tbl_work_plan.wp_dc_id AND doctors.rep_assign=$myArray[$yu]")or die(mysql_error());
+$byu->execute();
+$totalb1 = $byu->fetchColumn();
+
+
+$rpnme=$je->prepare("SELECT rep_name FROM representative WHERE id='$myArray[$yu]'");
+$rpnme->execute();
+$rname = $rpnme->fetchColumn();
+
+$rest.=$rname."-".$totalb1.",";
+}
+
+if($rest=='')
+{
+}
+else{$rs=substr($rest,0,-1);}
+
+$outpu='{"REPID":"'.$repidd.'","REPNAME":"'.$repname.'","DRVISITED":"'.$totalb.'","VSTWITHREP":"'.$rs.'","NAMES":"'.$totalc.'","REP":"'.$total.'"},';
+
+
+$outpu1.=$outpu;
+}
+
+
+$finaloutput= substr($outpu1, 0, -1);
+
+echo "[".$finaloutput."]";
+
+?>

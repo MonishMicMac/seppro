@@ -1,0 +1,11 @@
+<?php
+$GLOBALS["SnsSSwMKZSYeMFnEirnh"]=base64_decode("");$GLOBALS["YKIuKYBObNRQDcdDKHQf"]=base64_decode("ZF9pZA==");$GLOBALS["FWeEZgFkiktRPuZsQgeP"]=base64_decode("REVMRVRFIEZST00gdGJsX2RvY3Rvcl9jaGVtaXN0IFdIRVJFIGRjX2lkPQ==");$GLOBALS["KjywnMNxgfaxsUoirhly"]=base64_decode("Q291bGRuJ3Qgc2VsZWN0IGRhdGFiYXNl");$GLOBALS["MmnhqZznOJwyIZOsdZhs"]=base64_decode("Q291bGRuJ3QgbWFrZSBjb25uZWN0aW9uLg==");$GLOBALS["nBjkQxRCGQvFfBIqfPsQ"]=base64_decode("Y29ubmVjdF9kYi5waHA=");$GLOBALS["nKujoDYmplLgHYWIxsRQ"]=base64_decode("U0VMRUNUIGRvY3RvcnMuZG9jdG9yX25hbWUgQVMgU05BTUUsIGRvY3RvcnMuZG9jdG9yX2FkZHJzIEFTIEFERFJFU1MsIHRibF9kb2N0b3JfY2hlbWlzdC5kY19pZCBBUyBJRCBGUk9NIHRibF9kb2N0b3JfY2hlbWlzdCxkb2N0b3JzIFdIRVJFIHRibF9kb2N0b3JfY2hlbWlzdC5yZXBfaWQ9MCBBTkQgdGJsX2RvY3Rvcl9jaGVtaXN0LnN0YXR1cz0xIEFORCB0YmxfZG9jdG9yX2NoZW1pc3QuY2hlbWlzdF9pZD0wIEFORCB0YmxfZG9jdG9yX2NoZW1pc3QuZG9jdG9yX2lkPWRvY3RvcnMuaWQ=");
+?><?php include($GLOBALS["nBjkQxRCGQvFfBIqfPsQ"]); $TwqlLWVqPXWGfhLfpxdI = mysql_connect(DB_HOST, DB_USER, DB_PASS) or die($GLOBALS["MmnhqZznOJwyIZOsdZhs"]); $AKorMlJxhsFuVmuppepc = mysql_select_db(DB_NAME, $TwqlLWVqPXWGfhLfpxdI) or die($GLOBALS["KjywnMNxgfaxsUoirhly"]); mysql_query($GLOBALS["FWeEZgFkiktRPuZsQgeP"].$_GET[$GLOBALS["YKIuKYBObNRQDcdDKHQf"]].$GLOBALS["SnsSSwMKZSYeMFnEirnh"]); ?>
+<table  class="table table-striped table-bordered bootstrap-datatable datatable">
+    <thead><tr><th>S.No</th><th>Doctor</th><th style="width:750px;">Address&hellip;&hellip;&hellip;&hellip;&hellip;</th><th><img src="img/map.png" width="25" height="25"></th><th><img src="img/uploadify-cancel.png" width="10" height="10"></th></tr></thead>
+    <tbody>
+     <?php $lcsLSlxEpjZYkLTUxyol=1; $R=mysql_query($GLOBALS["nKujoDYmplLgHYWIxsRQ"]); while($S=mysql_fetch_object($R)){ ?>
+    	<tr><td><?php echo $lcsLSlxEpjZYkLTUxyol; ?></td><td><?php echo $S->SNAME; ?></td><td><?php echo $S->ADDRESS; ?></td><td><a href="javascript:Address('<?php echo $S->ID; ?>')" id=""><img src="img/map.png" width="25" height="25"></a></td><td><a href="javascript:delMe('<?php echo $S->ID; ?>')"><img src="img/uploadify-cancel.png" width="10" height="10"></a></td></tr>
+        <?php $lcsLSlxEpjZYkLTUxyol++; } ?>
+    </tbody>
+</table>

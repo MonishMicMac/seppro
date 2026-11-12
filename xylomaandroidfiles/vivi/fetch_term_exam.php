@@ -1,0 +1,5 @@
+<?php
+$GLOBALS["VpvUtLiLfyPnOouKcdmk"]=base64_decode("RVhBTV9OQU1F");$GLOBALS["CGbFgRIFcNnyLvvmfknU"]=base64_decode("Jw==");$GLOBALS["YMZAJyuJnVgVrXtRFTFw"]=base64_decode("U0VMRUNUICogRlJPTSBtc3RfZXhhbW5hbWVfY3JlYXRpb24gV0hFUkUgdGVybV9uYW1lID0n");$GLOBALS["dKpMLxpUlLerOdzvVkTc"]=base64_decode("aW5jbHVkZXNfc21zL2Nvbm5lY3RzbXMucGhw");$GLOBALS["NYhmCnnNkZDfWSryooTG"]=base64_decode("ZXhhbV9jcmVhdGVfaWQ=");$GLOBALS["clEhNfSOgBDjsCkLSYIb"]=base64_decode("ZXhhbV9uYW1l");
+?><?php session_start(); include($GLOBALS["dKpMLxpUlLerOdzvVkTc"]); $iznieRqZNROMmgoeRJXz = mysql_query($GLOBALS["YMZAJyuJnVgVrXtRFTFw"].$_REQUEST[$GLOBALS["VpvUtLiLfyPnOouKcdmk"]].$GLOBALS["CGbFgRIFcNnyLvvmfknU"])or die(mysql_error()); while($xXlBZNsNKDmkQWKlagQC = mysql_fetch_array($iznieRqZNROMmgoeRJXz)){ ?>
+    
+    	<option value="<?php echo $xXlBZNsNKDmkQWKlagQC[$GLOBALS["NYhmCnnNkZDfWSryooTG"]];?>"><?php echo $xXlBZNsNKDmkQWKlagQC[$GLOBALS["clEhNfSOgBDjsCkLSYIb"]];?></option> <?php }?>

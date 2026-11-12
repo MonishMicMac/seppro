@@ -1,0 +1,32 @@
+<?php
+ 
+
+
+
+$hostname="localhost";
+$username="root";
+$password="$3pp60@2016";
+$database="gage_aachi";
+$con=mysql_connect($hostname,$username,$password)or die('could not connect');
+mysql_select_db($database,$con)or die ('could not database');
+mysql_query("SET character_set_results = 'utf8', character_set_client = 'utf8', character_set_connection = 'utf8', character_set_database = 'utf8', character_set_server = 'utf8'", $con);	
+
+$rt='';
+// Path to move uploaded files
+$directory = "uploads/";
+$images = glob($directory . "*.jpg");
+
+echo '[';
+
+foreach($images as $image)
+{
+ 
+
+$rt.='{"image":"'.substr($image,8).'"},';
+
+}
+
+
+echo substr($rt, 0, -1);
+echo ']';
+?>

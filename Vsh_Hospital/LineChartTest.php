@@ -1,0 +1,13 @@
+<?php
+$GLOBALS["VbizEKIqximBAeFnnM"]=base64_decode("Z2VuZXJhdGVkL2RlbW81LnBuZw==");$GLOBALS["WSJZEduRBPqNQrxSCJGk"]=base64_decode("U2FsZXMgZm9yIDIwMDY=");$GLOBALS["WOJSAAWTADwAkZhnEIM"]=base64_decode("MDYtMTI=");$GLOBALS["ReVEfvVtSRbaTxtEmYQf"]=base64_decode("MDYtMTE=");$GLOBALS["MorcZZicPmuOsCTTVDWc"]=base64_decode("MDYtMTA=");$GLOBALS["pvsWqGAcjnXkVUpzmQOQ"]=base64_decode("MDYtMDk=");$GLOBALS["MKoiePSyfoVwRFULnBOw"]=base64_decode("MDYtMDg=");$GLOBALS["uwsnFjcWKiFmADMALnEI"]=base64_decode("MDYtMDc=");$GLOBALS["IIdgpfkRNUIyVhlENgoC"]=base64_decode("MDYtMDY=");$GLOBALS["GxddScMcnnbZwjSStBDY"]=base64_decode("MDYtMDU=");$GLOBALS["rddMSZBdsfJqnwcglQjO"]=base64_decode("MDYtMDQ=");$GLOBALS["dzENXRwRWVALdnovgZEY"]=base64_decode("MDYtMDM=");$GLOBALS["InLCdxLxnoBKIcpIkgjE"]=base64_decode("MDYtMDI=");$GLOBALS["LmMWTuJxSKoSupWmzYBU"]=base64_decode("MDYtMDE=");$GLOBALS["ewAhjVBgTBLirpwPqFiX"]=base64_decode("bGliY2hhcnQvY2xhc3Nlcy9saWJjaGFydC5waHA=");
+?><?php include $GLOBALS["ewAhjVBgTBLirpwPqFiX"]; $uCtAuEovBpVycrxdoNAv = new LineChart(); $lquwgvizPUygeWzVQZLF = new XYDataSet(); $lquwgvizPUygeWzVQZLF->addPoint(new Point($GLOBALS["LmMWTuJxSKoSupWmzYBU"], 4715)); $lquwgvizPUygeWzVQZLF->addPoint(new Point($GLOBALS["InLCdxLxnoBKIcpIkgjE"], 421)); $lquwgvizPUygeWzVQZLF->addPoint(new Point($GLOBALS["dzENXRwRWVALdnovgZEY"], 642)); $lquwgvizPUygeWzVQZLF->addPoint(new Point($GLOBALS["rddMSZBdsfJqnwcglQjO"], 799)); $lquwgvizPUygeWzVQZLF->addPoint(new Point($GLOBALS["GxddScMcnnbZwjSStBDY"], 1009)); $lquwgvizPUygeWzVQZLF->addPoint(new Point($GLOBALS["IIdgpfkRNUIyVhlENgoC"], 1406)); $lquwgvizPUygeWzVQZLF->addPoint(new Point($GLOBALS["uwsnFjcWKiFmADMALnEI"], 1820)); $lquwgvizPUygeWzVQZLF->addPoint(new Point($GLOBALS["MKoiePSyfoVwRFULnBOw"], 2511)); $lquwgvizPUygeWzVQZLF->addPoint(new Point($GLOBALS["pvsWqGAcjnXkVUpzmQOQ"], 2832)); $lquwgvizPUygeWzVQZLF->addPoint(new Point($GLOBALS["MorcZZicPmuOsCTTVDWc"], 3550)); $lquwgvizPUygeWzVQZLF->addPoint(new Point($GLOBALS["ReVEfvVtSRbaTxtEmYQf"], 4143)); $lquwgvizPUygeWzVQZLF->addPoint(new Point($GLOBALS["WOJSAAWTADwAkZhnEIM"], 4715)); $uCtAuEovBpVycrxdoNAv->setDataSet($lquwgvizPUygeWzVQZLF); $uCtAuEovBpVycrxdoNAv->setTitle($GLOBALS["WSJZEduRBPqNQrxSCJGk"]); $uCtAuEovBpVycrxdoNAv->render($GLOBALS["VbizEKIqximBAeFnnM"]); ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Libchart line demonstration</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-15" />
+</head>
+<body>
+	<img alt="Line chart" src="generated/demo5.png" style="border: 1px solid gray;"/>
+</body>
+</html>

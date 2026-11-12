@@ -1,0 +1,199 @@
+<?php
+$this_page='collectiondetails';
+include("include/header.php");
+?>
+<style type="text/css">
+.ui-autocomplete { position: absolute; cursor: default;z-index:9999999 !important;}
+</style>
+<div class="page-content-wrapper">
+   <div class="page-content">
+      <div class="page-head">
+         <div class="page-title">
+            <h1>Collection Report</h1>
+         </div>
+
+        
+      </div>
+      <?php
+      if($this->session->userdata('collection_error')!=''){
+         ?>
+         <div class="m-heading-1 border-red m-bordered">
+            <h3 style="margin: 0 0 0px;">
+               <?php
+               echo $this->session->userdata('collection_error');
+               $this->session->unset_userdata('collection_error');
+               ?>
+            </h3>
+         </div>
+         <?php
+      }
+      ?>
+
+       <div class="row">
+         <div class="col-md-12">
+            <div class="portlet light bordered">
+               <br/>
+               <br/>
+               <div class="row" style="margin-bottom: -20px;">
+                 <div class="row">
+                  <div class="col-md-5">
+                     <div class="form-group">
+                        <label class="control-label col-md-3">From Date</label>
+                        <div class="col-md-6">
+                        <input type="text" name="from_date" id="from_date" autocomplete="off"  class="form-control" />
+                        </div>
+                     </div>
+                  </div>
+                   <div class="col-md-5">
+                     <div class="form-group">
+                        <label class="control-label col-md-3">To Date</label>
+                        <div class="col-md-6">
+                        <input type="text" name="to_date" id="to_date" autocomplete="off"  class="form-control" />
+                        </div>
+                     </div>
+                  </div>
+
+
+                  <div class="col-md-2">
+                     <a href="javascript:void(0)" id="post_job_for_users" class="btn purple" >Search </a>
+                  </div>
+
+
+               </div>
+               <br/>
+            </div>
+         </div>
+      </div>
+   </div>
+
+      <div class="row">
+         <div class="col-md-12">
+            <div class="portlet light bordered">
+               <div class="portlet-title">
+                  <div class="caption"><i class="fa fa-globe"></i>Collection Report </div>
+                  <div class="tools"> </div>
+               </div>
+               <div class="portlet-body">
+
+                  <table class="table table-striped table-bordered table-hover" id="table">
+                     <thead>
+                        <tr>
+                           <th> S.No </th>
+                           <th> Bill No </th>
+                           <th> Collected Date </th>
+                           <th> Chit Name </th>
+                           <th> Subscriber Name </th>
+                           <th> Prev Out. Amount </th>
+                           <th> Coll. Amount </th>
+                           <th> Out. Amount </th>
+                           <?php if($this->session->userdata('user_details')['log_user_role']=='1')  { ?>
+                           <th> Actions </th>
+                        <?php } ?>
+                        </tr>
+                     </thead>
+
+                     <tfoot>
+                        <tr>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th style="text-align:right">Total:</th>
+                           <th id="prev_out_amt"></th>
+                           <th id="coll_amt"></th>
+                           <th id="out_amt"></th>
+                           <?php if($this->session->userdata('user_details')['log_user_role']=='1')  { ?>
+                           <th></th>
+                        <?php } ?>
+                       </tr>
+                    </tfoot>
+                  </table>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+<input type="hidden" id="change_check">
+<input type="hidden" id="cur_date" value="<?php echo date('d/m/Y'); ?>">
+<?php
+include("include/footer.php");
+?>
+<script type="text/javascript">
+   $(document).ready(function() {
+
+      $('#from_date').datepicker({
+         format: 'yyyy-mm-dd'
+      });
+
+      $('#to_date').datepicker({
+         format: 'yyyy-mm-dd'
+      });
+    
+
+      var table;
+      table = $('#table').DataTable({ 
+         "processing": true,
+         "serverSide": true,
+         "order": [],
+         "ajax": {
+            "url": "<?php echo site_url('Collection_report_controller/view_all_collections')?>",
+            "type": "POST",
+            "data": function ( data ) {
+               data.from_date = $('#from_date').val();
+               data.to_date = $('#to_date').val();
+            },
+            "complete" : function(data){
+               var result = JSON.parse(JSON.parse(JSON.stringify(data)).responseText);
+
+               $("#prev_out_amt").html(result.prev_out_amt);
+               $("#coll_amt").html(result.coll_amt);
+               $("#out_amt").html(result.out_amt);
+            }
+         },
+         "lengthMenu": [
+         [10, 20, 50, 100, 150, -1],
+         [10, 20, 50, 100, 150, "All"]
+         ],
+         
+         buttons: [
+         { extend: 'print', exportOptions: { columns: ':visible' }, className: 'btn dark btn-outline', footer: true },
+         { extend: 'copy', exportOptions: { columns: ':visible' }, className: 'btn red btn-outline', footer: true },
+         { extend: 'pdf', exportOptions: { columns: ':visible' }, className: 'btn green btn-outline', footer: true },
+         { extend: 'excel', exportOptions: { columns: ':visible' }, className: 'btn yellow btn-outline', footer: true },
+         { extend: 'csv', exportOptions: { columns: ':visible' }, className: 'btn purple btn-outline', footer: true },
+         { extend: 'colvis', className: 'btn dark btn-outline', text: 'Columns'}
+         ],
+         "dom": "<'row' <'col-md-12'B>><'row'<'col-md-6 col-sm-12'l><'col-md-6 col-sm-12'f>r><'table-scrollable't><'row'<'col-md-5 col-sm-12'i><'col-md-7 col-sm-12'p>>", 
+         "columnDefs": [
+         { 
+            "targets": [ 0 ],
+            "orderable": true,
+         }
+         ]
+      });
+
+      $("#post_job_for_users").click(function(){
+         table.ajax.reload();
+      });
+
+   });
+
+    function cancel_this(show){
+      if(confirm("Do You Want To Delete This Bill?")==true){
+         $.ajax({
+            url : base_url+"index.php/Collection_report_controller/cancel_collection",
+            type : 'post',
+            data : 'coll_id='+$(show).attr('coll_id'),
+            context: show,
+            success:function(result){
+               alert("Bill No "+$(show).attr('bill_no')+" has been Cancelled...");
+               window.location.href=base_url+"index.php/Collection_report_controller/collection_management";
+            }
+         });
+      }
+   }
+
+</script>

@@ -1,0 +1,103 @@
+<?php
+
+include("connect.php"); 
+
+ $id=$_REQUEST['id'];
+ $date=$_REQUEST['date'];
+$status=$_REQUEST['status'];
+
+$outpu;
+$outpu1;
+
+
+
+
+
+echo '[';
+
+
+
+$a = mysql_query("SELECT representative.id,representative.rep_name FROM representative,assigningreptomanager WHERE  assigningreptomanager.managerid='$id' AND representative.id=assigningreptomanager.repid")or die(mysql_error());
+
+while($jj = mysql_fetch_array($a))
+{
+
+
+ $repname=$jj['rep_name'];
+ $repidd=$jj['id'];
+
+if($status=='1')
+{
+$resultss = mysql_query("SELECT reorting.id,reorting.reportedtime,clinetcreation.typeofcustomer,reorting.remarks,reorting.latt,reorting.longg,reorting.scheduleddate,reorting.scheduledtime,clinetcreation.name,clinetcreation.mobileno,CONCAT(clinetcreation.`address`,' ',clinetcreation.`Addrtess_line1`,' ',clinetcreation.`Addrtess_line2`) as address,clinetcreation.companyname,clinetcreation.pincode,clinetcreation.latts,clinetcreation.longgs,clinetcreation.type FROM reorting,clinetcreation WHERE reorting.repid='$repidd'  AND reorting.tdate='$date' AND reorting.clientid=clinetcreation.id");
+ $num_rowss = mysql_num_rows($resultss);
+
+
+
+
+
+$strSQL = "SELECT reorting.id,reorting.remarks,reorting.reportedtime,clinetcreation.typeofcustomer,reorting.comingtime,reorting.complaints,reorting.amount,reorting.typeofcall,reorting.servicetype,reorting.latt,reorting.longg,reorting.attendance,reorting.scheduledtime,clinetcreation.name,clinetcreation.mobileno,CONCAT(clinetcreation.`address`,' ',clinetcreation.`Addrtess_line1`,' ',clinetcreation.`Addrtess_line2`) as address,clinetcreation.landmark,clinetcreation.companyname,clinetcreation.pincode,clinetcreation.latts,clinetcreation.longgs,clinetcreation.type,reorting.productrequested FROM reorting,clinetcreation WHERE reorting.repid='$repidd' AND reorting.tdate='$date'  AND reorting.clientid=clinetcreation.id";
+
+ 
+
+}
+else
+{
+$resultss = mysql_query("SELECT reorting.id,reorting.reportedtime,clinetcreation.typeofcustomer,reorting.remarks,reorting.latt,reorting.longg,reorting.scheduleddate,reorting.scheduledtime,clinetcreation.name,clinetcreation.mobileno,CONCAT(clinetcreation.`address`,' ',clinetcreation.`Addrtess_line1`,' ',clinetcreation.`Addrtess_line2`) as address,clinetcreation.companyname,clinetcreation.pincode,clinetcreation.latts,clinetcreation.longgs,clinetcreation.type FROM reorting,clinetcreation WHERE reorting.repid='$repidd' AND reorting.servicetype='SALES' AND reorting.tdate='$date' AND reorting.clientid=clinetcreation.id");
+ $num_rowss = mysql_num_rows($resultss);
+
+
+
+
+
+$strSQL = "SELECT reorting.id,reorting.remarks,clinetcreation.typeofcustomer,reorting.reportedtime,reorting.comingtime,reorting.complaints,reorting.amount,reorting.typeofcall,reorting.servicetype,reorting.latt,reorting.longg,reorting.attendance,reorting.scheduledtime,clinetcreation.name,clinetcreation.mobileno,CONCAT(clinetcreation.`address`,' ',clinetcreation.`Addrtess_line1`,' ',clinetcreation.`Addrtess_line2`) as address,clinetcreation.landmark,clinetcreation.companyname,clinetcreation.pincode,clinetcreation.latts,clinetcreation.longgs,clinetcreation.type,reorting.productrequested FROM reorting,clinetcreation WHERE reorting.repid='$repidd' AND reorting.tdate='$date' AND reorting.servicetype='SALES' AND reorting.clientid=clinetcreation.id";
+
+
+}
+
+$objQuery = mysql_query($strSQL);
+	$intNumField = mysql_num_fields($objQuery);
+
+	$resultArray = array();
+	while($obResult = mysql_fetch_array($objQuery))
+	{
+		$arrCol = array();
+		for($i=0;$i<$intNumField;$i++)
+		{
+                
+		 $arrCol[mysql_field_name($objQuery,$i)] = $obResult[$i];
+                 
+
+		}
+                $sql=mysql_query("SELECT GROUP_CONCAT(pro_name) as pro_name FROM product WHERE id IN (".$arrCol['productrequested'].")");
+		$row=mysql_fetch_array($sql);
+		$arrCol['pro_name']=$row['pro_name'];
+                $arrCol['repnames'] = $repname." - ".$num_rowss;
+		array_push($resultArray,$arrCol);
+	}
+	
+if(strlen(json_encode($resultArray))==2)
+{
+}
+else
+{
+
+
+$result = substr(json_encode($resultArray), 1, -1);
+
+$outpu1.=$result.',';
+
+}
+	
+}
+
+
+if(strlen(json_encode($result))>2)
+{
+
+$outpu = substr($outpu1, 0, -1);
+echo $outpu;
+echo ']';
+}
+
+
+?>

@@ -1,0 +1,121 @@
+S.no,doctor_name,doc_specilist_id,doc_qualification,doctor_addrs,doc_pincode,doc_contact_no,doc_hospital_clinic_name
+1,JAI GANESH.J,PHY,MD,CHENNAI DIABETIC CENTRE,635001,9443154384,DR.JAIGANESH
+2,GOVINDARAJ,PHY,MD,,635001,4343230666,
+3,ARAVINDAN.P.D,PHY,MD,ASHOK ACCIDENT HOSPITAL,635109,8903787683,AROKIYA PHARMACY
+4,KARTHIK PANDIYAN.K.S,PHY,MD,GUNAM SUPER SPECIALITY HOSPITAL,635109,9994694698,HOSUR SUPER SPECIALITY HOSPITAL
+5,KANNAPPAN.D,PHY,MD,KANNAPPA HOSPITAL,635109,9443851363,POORNAM PHARMACY
+6,RAJKUMAR.J,PHY,MD,ST.JOSEPH HEALTHCARE,635001,9942190081,DR.RAJKUMAR.J
+7,SUNDHARA MOORTHY.M.G,PHY,MD,MARUTHI NURSING HOME,635001,4343238943,
+8,SARAVANAN.V,PHY,MD,KVS HOSPITAL,635001,9047013307,KVS PHARMACY
+9,RAGUPATHY.L,PHY,MD,DHANVANTHIRI DIABETIC DAY CARE CENTRE,635001,9443512477,SRI JAGADISHEESH MEDICALS
+10,DEEPAK ANAND.R,PHY,MD,ASHOK ACCIDENT HOSPITAL,635109,9940141092,AROKIYA PHARMACY
+11,KANNAN.D,CARDIO,MD.DM,SHRI KRISHNA CARDIAC CARE CENTRE,635001,9444224566,DR.KANNAN
+12,RENGARAJ.R,NEURO,MD.DM,LAKSHMI HOSPITAL,635109,4344320999,LAKSHMI  PHARMACY
+13,CHANDRASEKARAN.P,NEURO,MD.DM,DEEPAVEL CLINIC,635001,8489999182,DR.CHANRASEKARAN.P
+14,CHENNAPPAN.C,NEURO,MD.DM,KAVIN NEURO CENTRE,635001,9962548811,DR.CHENNAPPAN.C
+15,PRADEEP KUMAR.K,D.L.O,D.L.O,GUNAM SUPER SPECIALITY HOSPITAL,635109,9944678484,HOSUR SUPER SPECIALITY HOSPITAL
+16,VIVEK.A.S,DIAB,F.DIAB  ,VIVEKS HEALTH CARE,635109,,GENERAL MEDICALS
+17,VIJAY SURESH.K,DIAB,MBBS   ,KANNAPPA HOSPITAL,635109,,POORNAM PHARMACY
+18,SELVI JAYAKUMAR.K.J,G.P,MBBS,GANESHA HOSPITAL,635001,9943799079,GANESHA MEDICALS
+19,SIVAPRAKASH A.M,G.P,MBBS,VIVEKS HEALTH CARE,635109,9865735855,GENERAL MEDICALS
+20,UMAPATHY.V,G.P,MBBS,M.G.V.HOSPITAL,635001,9443230467,RAAMAA MEDICALS
+21,SENTHIL KUMAR.S,SUR,MS,V.J.S.HOSPITALS,635001,8098420233,DR.NAME
+22,SRIDHARAN.K,SUR,MS,JEEVA  HOSPITAL,635001,9655231371,JEEVA MEDICALS
+23,SRINIVASALU,SUR,MS,B.M.S.MULTI SPECIALITY HOSPITAL,635126,9443474608,BMS PHARMACY
+24,SHANMUGAVELU T.T,SUR,MS,MEERA NURSING HOME,635109,9842742827,SARAVANA MEDICALS
+25,HARI PRIYA REDDY.Y,SUR,MS,MURTHY CLINIC,635001,9751101395,DR.NAME
+26,SENTHIL.M,SUR,MS,GUNAM SUPER SPECIALITY HOSPITAL,635109,9443244123,HOSUR SUPER SPECIALITY HOSPITAL
+27,HEMANTH,ORTHO,D.ORTHO,ASHOK ACCIDENT HOSPITAL,635109,9790981607,AROKIYA PHARMACY
+28,NARESH.R,ORTHO,MS,BONE&JOINT CLINIC,635109,9244424416,SHRI GAYATHRI MEDICALS
+29,PRABHU DEV .K.B,ORTHO,"MS,MRCS",GUNAM SUPER SPECIALITY HOSPITAL,635109,9585591288,HOSUR SUPER SPECIALITY HOSPITAL
+30,KAVITHA,GYN,M.D (O&G),GUNAM SUPER SPECIALITY HOSPITAL,635109,,HOSUR SUPER SPECIALITY HOSPITAL
+31,VANITHA,GYN,M.D (O&G),GUNAM SUPER SPECIALITY HOSPITAL,635109,,HOSUR SUPER SPECIALITY HOSPITAL
+32,DEEPA NAVEEN,GYN,M.S(O&G),SANTHI HOSPITAL JANANAM FERTILITY CENTRE,635126,,SANTHI PHARMACY
+33,DEVAKINAYAK.K,GYN,DGO,MATERNITY&CHILD HEALTH CARE CENTRE,635109,4344222906,MURALI MEDICALS
+34,KAVITHA.M,GYN,DGO,ST.MARYS HOSPITAL,635001,9585987774,"DR.M.KAVITHA,MBBS.DGO.,"
+35,KALAIVANI.A,GYN,DGO,,635001,9447207654,
+36,MEERABAI.S,GYN,DGO,MEERA NURSING HOME,635109,242827,STAR MEDICALS
+37,SUJATHA ANBALAGAN.K,GYN,DGO,OHM PRAKASH CLINIC,635001,9597882060,OM SARAN MEDICALS
+38,PRAMILA SRIDHARAN.S,GYN,"DGO.DNB.,OBS&GYNAE,MRCOG.LONDON",JEEVA HOSPITAL,635001,9655208013,JEEVA MEDICALS
+39,SEKAR.M,DIAB,"PGDHSC.,(DIAB)FCD",DR.SEKAR HOSPITAL,635001,9944368181,DR.SEKAR
+40,Anuradha.N,DGO/MDOG/DNB(Gynaecology),Dgo,"#76-R,old Bangalore road,hosur",635109,9944904553,Vijay hospital 
+41,Dr.Karthikeyan,DM(Cardiology)/DNB(Cardiology),"Mobs,c,cardiao","No.35,Shanghai Nagar,Denkanikottai road,opp.To CSI church,Hosur",635109,,Kauvery hospital 
+42,sivakumar.BK,Ms.ortho,"Mbbs.ms (ortho).,mch (ortho)","No,1/136A Annan sathya Nagar,near by lic office,Salem road,krishnagiri",635001,4343233366,Uma ranI hospitals
+43,anandkumar.s,MBBS DLO/MS ENT,Mbbs dlo,"78,end cross,co.op colony,east link road,krishnagiri",635001,9498089686,Sri Anish medicals & clinic
+44,Karthikeyan.,D.Ortho,Mbbs d.ortho,"78,2nd cross co.opp colony,east link road,krishnagiri",635001,7010728742,Sri anish medicals & clinic
+45,Geetha priya.p,M.s OBG,Mbbs gyn,"M1& h-23,sf 749,Avalapalli housing board,bagalur road,hosur,",635109,9948738386,Sri chandra sekara hospital
+46,Sumanth.k.p,MD(Diabetolgy)/D.Diab,Mbbs cons phy,"M1,h-23,st 749,avalapalli housing board,bagalur road,hosur",635109,7867016668,Sri chandra sekara  hospital
+47,Sasikala.a,DGO/MDOG/DNB(Gynaecology),Mbbs dgo consult obstrician gyn,"M-1&h-23,sf 749,avalappalihousing board bagalur road,hosur",635109,9943611368,Sri chandra sekar hospital
+48,Rijo m jayaraju,MBBS DLO/MS ENT,Mbbs ms ENT,"M-1&h-33fs749,avalappali hosing board,bagalur road,hosur",635109,9008592424,Sri chandra sekar hospital 
+49,Padmini bhat,DGO/MDOG/DNB(Gynaecology),Mbbs ms Obg gyn,"15,tank street hosur",635109,4344222906,Maternity & child health care centre 
+50,Venkatesan.R,DM(Cardiology)/DNB(Cardiology),"Mobs,md dm cardio",,635001,9787132686,ARK MUTISPECILITY HOSPITALS
+51,SATHIS BABU. V.K ,Peadiatric ,MBBS dch ,No 41/21  mg road hour ,635109,9443539444,Child health care 
+52,PARIMALA DE VE.L.,Dgo,Mbbs dgo,Popular plaza,635107,9444800061,JEEVAN HOSPITAL 
+53,DR.KALPANACHAKKRAVARTHY,GP,MBBS,40E AARASAMARASTREET  TIRUPATHOOR,635601,9790638258,K.C HOSPITAL 
+54,DR.GEEDHARANE,GYNOCOLOGY,MBBS DGO,64 2nd cross co opretive colony krishinagire,635001,9003471835,OM SAKTHI HOSPITAL 
+55,KB.RASAGOPALAN,Surgery ,MBBS  ms,64 2nd cross co opretive colony krishinagi ,635001,9488563490,OM SAKTHI hospitala
+56,DR.A.VANITHAPRADEEPKUMAR,Gynaecologist,Dnb obg,No120  2b2 opp denkanikottairoad hosur,635109,9677558743,Gunam hospital 
+57,DR.C.ANBARASU,Cosmetology ,MBBS  ddvl  dc cos,Popular plaza opp  bus stand denkanikottai,635107,9444800061,Jeevan hospital 
+58,DR..S.VIJAYAKUMARI,Gp,MBBS ,Res 75 kutcherystreet tirupattur,635601,4179220864,Vijayakumare hospital 
+59,Dr. Leela Subramanian ,Gynocology ,MBBS ms ,#95 cuthery street ,635601,4179224823,L s hospital 
+60,Dr. P.DURAISAMY ,Diabetic ,MBBS diabetes ,11a kaliamman kovil  street  tirupattur,635601,8903014240,Durai hospitals 
+61,DR.chitra,Gyno ,MBBS  dgo ,Tirupattur.vlr.,635601,8903014240,Duraihospital 
+62,Dr. B.c.Chandra sekar,Ortho,Ms ,Bagalurroadhosur,635109,9894232424,Sri Chandra sekara hospital 
+63,Dr. V.saroja ,Gyno ,MBBS dgo ,No 149ghandi road denkanikotta,635107,9442518732,Santhi hospitalgangg 
+64,Bm.sundrarajul ,Gp ,MBBS fccp,Ghandi road  denkanikottai,635107,9442518732,Santhi hospital
+65,B.k.sivakumar,Ortho,Ms,Salamroad krishinagi ,635001,9843560606,Umaranehospital 
+66,M.chennammal,Surgery ,Ms ,Krishinagirimainroad  uthangarai,635207,9442188879,Srinirmal hospital 
+67,PM.SENTHALNATHAN,Phy,Md,Tarumaraja kovil street  tirupathur ,635601,4179229877,Gs hospital 
+68,DR.gunavathysenthil,Gynog,Msog,Tarumaraja kovil stree t tirupathur ,635601,4179229877,Gs hospital 
+69,DR.KALIVARADHAN ,Diabetes ,Md,No 643 vallalar nagar  tirupathur ,635601,4341223001,Kalivaradhan hospital 
+70,R.NATESAN,Surgeon ,MBBS ,19 salem  main road utthangarai ,635207,9443608492,Natasan  hospital
+71,S.vijayalakshmi ,Gynok ,Md  og,Tank street  hosur ,635109,9443222509,Iakshmi hospital
+72,Dr.vidyasri.s.,O&g,Mbbs ms,Lal  hosur,635126,4344278999,Bms  multispecilityhospital
+73,K.t.sivakumar,Surgery ,Mbbs  ms,Vaniyambade mainroad tirupathor ,635601,4179223733,Siva ent  centre 
+74,R.pulandaran,Gp,Bsms,Dekanikotta mainroad kelamangalam ,635113,9943633677,Sr hospital
+75,K.ANITA ,GYNOG,MBBS DGO,DHARMAPURI ROAD TIRUPATTUR ,635601,9840194049,AM CLINIC 
+76,Mars.parimalaprakash ,Gyn,Mbbsdgo,Indian  bank opp TIRUPATTUR ,635601,9442317206,Sundaram hospital 
+77,E.senthilkumar ,Gp,Mbbs,Postoffice  TIRUPATTUR ,635601,8012453551,Sri adhilakshmi clinic 
+78,K.kandhasamy,Pead,MBBS dch,Dcc  bank uttangarai,635207,431220205,Iakshmi  nursing  home
+79,V.RANGAN,Gp,MBBS ,Ghandi road  denkanikotta,635107,230144,Rangan  clinic 
+80,Gajendran ,Surgery ,Ms,Katchary street  TIRUPATTUR ,635601,4179220875,Kalyane gajendran hospital
+81,Kalyane gajendran ,Gyn ,MBBS dgo ,18 katchery street  TIRUPATTUR ,635601,4179220875,Kalyane gajendran  hospital 
+82,DR.CHITRA  ,Sonologist,Mbbs dgo ,230/182     krishnagiri main road uthangari,635207,4341222222,JANARTHNA  hospital 
+83,J.p.senthilkumar ,GP,Mbbs,# 4 muganthan nagar  dharmapuri road TIRUPATHUR ,635601,8015577654,Sri jaya  hospital
+84,L.needhialagan ,Diabetic ,Bsc  mbbs,Salem  krishinagi ri  x road 3 street  ramakkapattai  TIRUPATHUR ,635601,9443280321,Nithya clinic  
+85,Vedika renukanth ,Pead ,Md  dnb,"# 1/156,rayakottai road near  arya  bhavan sweets  krishinagi ",635001,7708758143,Vidika  child care 
+86,A.ANBLAGAN ,Pead ,Md dch,"65/22,4th cross  co operative colony krishinagiri ",635001,4343231783,Ooh prakas  clinic 
+87,DR.d.kaven ,GP,Mbbs,Tiruvanniamalai road uattangarai ,635207,4341222003,Kaven  hospital 
+88,DR.T.ABHINAYA,GP,MBBS,No.18  sivanarstreet TIRUPATHUR ,635601,9944630033,Shri ganasha clinic 
+89,DR.ashok,Gp,Mbbs,"No.2,popular plaza  building, opp.to bus stand denkanikottai",635107,4347235500,DR.ashok
+90,DR.Rechina ashok,Gyn ,Mobs dgo,"No.2 popular  building, opp. tobusstand  denkanikottai",635107,4347235500,Ashokhospital 
+91,Dr.s.tiyagarajan,Ortho,Mbbs ortho,Statebank  opp krishinagiri  main road uttingarai,635207,,Anbu hospital
+92,Dr.d.uadhiyatharagai ,Gp,Mbbs ,State bank op krishinagiri  main road uttiangarai ,635207,,Anbu hospital 
+93,Dr.v.karthikeyan ,Gp,Mbbs ,Senguntharstreet  uttiangarai ,635207,8637487671,Vijayavenket clinic 
+94,Dr.a.naveen ,PHY,Mbbs. Da.Dnb,"Opp.Lal,behind sbi. Spigot,hosur ",635126,9787873057,Santhihospital 
+95,Dr.v.devarasu,Phy,Mobs.md,Tiruvannamalai road uttiangarai ,635207,4341222003,Kaven hospital 
+96,DR.KARI KALAN ,General practitioner,MBBS(General Practitioner),Bangalore road krishnagiri ,635001,9865018268,Parma poly clinic 
+97,Dr.ashok Kumar ,General practitioner,MBBS(General Practitioner),Bangalore road Krishna girl ,635001,9865018268,Parma poly clinic 
+98,Dr.m.n.selvi,Paediatric and General ,Mobs dch,No. 72/46 rayappa muthali street krishnagiri ,635001,4342238469,Srinivasa hospital 
+99,Dr.manikandan ,Physician,Mbbs  md ,No. 43 krishna giri main road opp to taluk office tirupattur,635601,9654008035,K aLyan clinic
+100,Manoj Kumar ,Physician ,Mbbs  md ,No 75 kacheri street thirupattur ,635601,4179220864,V ijaya hospital 
+101,Madammal,Gyno,Mbbs dgo,Denkanikotta,636701,,Rangan  hospital
+102,Saravani,Gp,Mbbs ,"Popularplaza, opp.bus stand.denkanikottai",635107,9444800061,Jeevan hospital
+103,Dr.senthilkumar ,GP,Mbbs ,Postoffice  uttangarai,635207,9442350703,Sri adhilakshmi  clinic
+104,S.v.kannagi,Surgen ,Mobs.ms,"Malur  main road,bagalur circle, bagalur",635103,8760609594,S.v.clinic
+105,Dr..yaruingamrimai ,GP,MBBS(General Practitioner),Malur main road bagalur,635124,9443255272,Grace healthcare 
+106,Dr.S.hariharan,Bhms,Bhms,"Malur main road, bagalur ",635124,9865856987,Rao hospital
+107,Dr.venugopalreddy,Mbbs  dvd,Ganaral  and skin,"#2/184-5,jeeva nagar ",635103,4344254588,Tirumala hospital 
+108,DR. S.S.ravikumar ,Ortho,Ms ortho,Near  roundana  krishinagire,635001,4343225100,Arun  hospital
+109,Dr.v.karthikeyan,Ortho,Mbbs  d   ortho,"78,2nd  cross  co  operative colony",635001,9944012963,Sri anish  clinic
+110,Dr.a.arvuselvan ,Dlo,Mbbs  dlo ,"# b,co operative  colony street  krishinagire ",635001,,Ramachandra ent center
+111,Sutha vijie ,Surgen  and gyn,Ms dgo,Tank street  hosur,635109,4344220599,Gunam  super speciality hospital
+112,Dr.a.peterbrittio,Diab,"Mr,diab","37,periyakollar street, hosur",635109,,Peter hospitaal
+113,Dr.m.jayapriya,Gp,"Mbbs, fcd",# 13/61/2tankstreet hosur,635109,4344323096,Periya hospital
+114,Dr.j.rajeshkumar ,Physician and diabetic ,"Mbbs,md",Old Bangalore road  hosur,635109,,Vijay hospital 
+115,Dr.reka rejash ,Gyn ,"Mbbs, dgo ","Old Bangalore  road,hosur.",635109,,Vijay hospital 
+116,Radhika satish.  K.v,Pead,Dch,No 41/27 mg road   hosur ,0,,Child health care
+117,Dr.Rajesh  ,Surgery ,"Ms, ortho",Hosur ,635502,,Vijay hospital
+118,Rekarajesh,Gyn ,"Mbbs,dgo",Hosur ,0,,Vijay hospi tal 
+119,Dr.Ravikumar reddy,Surgery ,MS.Ortho,"Near csi church, hosur ",0,,Venkatasai hospital 
+120,Dr.g.eazilarase yuvaraj,Gyn,Mbbs dgo ,"No.296/565,Ghandi road, krishinagi re",0,9488564303,Sankarclinic

@@ -1,0 +1,2 @@
+for multiple:  http://ags.gage.co.in/test/aachi_android/leave_insert.php?leave_type=2&student_id=3&from=2017-03-04&to=2017-03-08&reason=test_reason
+for single:    http://ags.gage.co.in/test/aachi_android/leave_insert.php?leave_type=1&student_id=3&from=2017-03-04&to=&reason=test_reason
